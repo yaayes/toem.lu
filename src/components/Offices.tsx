@@ -16,11 +16,11 @@ function Office({
         invert ? 'text-neutral-300' : 'text-neutral-600',
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
+      {/* <strong className={invert ? 'text-white' : 'text-neutral-950'}>
         {name}
       </strong>
-      <br />
-      {children}
+      <br /> */}
+      <b>{children}</b>
     </address>
   )
 }
@@ -33,9 +33,11 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="Luxembourg" invert={invert}>
-          18 Route d’Esch, Gasperich
+          56 rue de la victoire
           <br />
-          1417, Luxembourg, Luxembourg
+          8047 Strassen, Luxembourg.
+          <br />
+          <u>TVA LU34919649</u>
         </Office>
       </li>
     </ul>

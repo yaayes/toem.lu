@@ -70,10 +70,18 @@ function LinkedinIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
-  { title: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedinIcon },
+  {
+    title: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61555210839387',
+    icon: FacebookIcon,
+  },
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/toem_lu/',
+    icon: InstagramIcon,
+  },
+  // { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
+  // { title: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedinIcon },
 ]
 
 export function SocialMedia({
@@ -87,7 +95,7 @@ export function SocialMedia({
     <ul
       role="list"
       className={clsx(
-        'flex gap-x-10',
+        'flex gap-x-4',
         invert ? 'text-white' : 'text-neutral-950',
         className,
       )}

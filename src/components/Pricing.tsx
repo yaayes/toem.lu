@@ -32,8 +32,14 @@ const tiers = [
 export default function Pricing() {
   return (
     <Container className="mt-16">
-      <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+      <div
+        id="nos-formules"
+        className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
+      >
+        <div
+          className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
+          aria-hidden="true"
+        >
           <div
             className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
             style={{
@@ -43,32 +49,37 @@ export default function Pricing() {
           />
         </div>
         <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-          <h2 className="mt-2 text-4xl font-medium tracking-tight text-amber-400 sm:text-5xl font-display [text-wrap:balance]">
+          <h2 className="mt-2 font-display text-4xl font-medium tracking-tight text-amber-400 [text-wrap:balance] sm:text-5xl">
             Nos Formules
           </h2>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-          Avec ces deux formules, Toem.lu vous permet de vendre votre maison ou appartement par vous-même au Luxembourg en vous offrant une assistance et des services adaptés à vos besoins. Choisissez la formule qui vous convient le mieux pour une vente réussie en toute simplicité !
+          Avec ces deux formules, Toem.lu vous permet de vendre votre maison ou
+          appartement par vous-même au Luxembourg en vous offrant une assistance
+          et des services adaptés à vos besoins. Choisissez la formule qui vous
+          convient le mieux pour une vente réussie en toute simplicité !
         </p>
         <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
           {tiers.map((tier, tierIdx) => (
             <div
               key={tier.id}
               className={cx(
-                tier.featured ? 'relative bg-amber-400 shadow-2xl sm:px-10 sm:py-20' : 'bg-white/60 sm:mx-8 lg:mx-0 sm:p-10',
+                tier.featured
+                  ? 'relative bg-amber-400 shadow-2xl sm:px-10 sm:py-20'
+                  : 'bg-white/60 sm:mx-8 sm:p-10 lg:mx-0',
                 tier.featured
                   ? ''
                   : tierIdx === 0
-                    ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl'
-                    : 'sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none',
-                'rounded-3xl p-8 ring-1 ring-amber-900/10'
+                  ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none'
+                  : 'sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl',
+                'rounded-3xl p-8 ring-1 ring-amber-900/10',
               )}
             >
               <h3
                 id={tier.id}
                 className={cx(
-                  tier.featured ? 'font-bold text-lg' : 'text-base',
-                  'font-semibold leading-7 text-black'
+                  tier.featured ? 'text-lg font-bold' : 'text-base',
+                  'font-semibold leading-7 text-black',
                 )}
               >
                 {tier.name}
@@ -78,12 +89,15 @@ export default function Pricing() {
               </p> */}
               <ul
                 role="list"
-                className="mt-8 space-y-3 text-sm leading-6 sm:mt-10 text-gray-600"
+                className="mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10"
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
                     <CheckIcon
-                      className={cx(tier.featured ? 'text-black' : 'text-gray-800', 'h-6 w-5 flex-none')}
+                      className={cx(
+                        tier.featured ? 'text-black' : 'text-gray-800',
+                        'h-6 w-5 flex-none',
+                      )}
                       aria-hidden="true"
                     />
                     {feature}
@@ -97,7 +111,7 @@ export default function Pricing() {
                   tier.featured
                     ? 'bg-black text-white shadow-sm hover:bg-gray-800 focus-visible:outline-gray-800'
                     : 'text-black ring-1 ring-inset ring-black hover:ring-gray-300 focus-visible:outline-black',
-                  'mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10'
+                  'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10',
                 )}
               >
                 Contactez-nous
@@ -107,5 +121,5 @@ export default function Pricing() {
         </div>
       </div>
     </Container>
-  );
+  )
 }

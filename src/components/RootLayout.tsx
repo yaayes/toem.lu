@@ -81,10 +81,14 @@ function Header({
             invert={invert}
             filled={logoHovered}
           /> */}
-          <Image src={logoImage} alt='Teom.lu' width={200} height={64}></Image>
+          <Image src={logoImage} alt="Toem.lu" width={200} height={64}></Image>
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button className='bg-amber-400 text-black' href="/contact" invert={invert}>
+          <Button
+            className="bg-amber-400 text-black"
+            href="/contact"
+            invert={invert}
+          >
             Contactez-nous
           </Button>
           <button
@@ -147,7 +151,9 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/#nos-clients">Nos Clients</NavigationItem>
-        <NavigationItem href="/#pourquoi-choisir-TEOM">Pourquoi Choisir Toem ?</NavigationItem>
+        <NavigationItem href="/#pourquoi-choisir-TOEM">
+          Pourquoi Choisir Toem ?
+        </NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/#nos-formules">Nos Formules</NavigationItem>

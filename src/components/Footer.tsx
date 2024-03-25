@@ -11,8 +11,8 @@ const navigation = [
   {
     links: [
       { title: 'Nos Client', href: '/#nos-clients' },
-      { title: 'Pourquoi Choisir TOEM ?', href: '/#pourquoi-choisir-TEOM' },
-      { title: 'No Formules', href: '/#nos-formules' },
+      { title: 'Pourquoi Choisir TOEM ?', href: '/#pourquoi-choisir-TOEM' },
+      { title: 'Nos Formules', href: '/#nos-formules' },
       { title: 'Contactez-nous', href: '/contact' },
     ],
   },
@@ -66,7 +66,8 @@ function NewsletterForm() {
         Abonnez-vous à notre newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Abonnez-vous pour recevoir les dernières mises à jour immobilières, articles, ressources et inspirations de notre agence.
+        Abonnez-vous pour recevoir les dernières mises à jour immobilières,
+        articles, ressources et inspirations de notre agence.
       </p>
       <div className="relative mt-6">
         <input
@@ -102,10 +103,15 @@ export function Footer() {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Image src={logoImage} alt='Teom.lu' width={120} height={32}></Image>
+            <Image
+              src={logoImage}
+              alt="Toem.lu"
+              width={120}
+              height={32}
+            ></Image>
           </Link>
           <p className="text-sm text-neutral-700">
-            © TEOM. {new Date().getFullYear()}
+            © TOEM. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

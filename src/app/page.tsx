@@ -19,7 +19,7 @@ import logoHomeWorkDark from '@/images/clients/home-work/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import immoFeature from "@/images/immo-features.svg";
+import immoFeature from '@/images/immo-features.svg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import Pricing from '@/components/Pricing'
 
@@ -36,7 +36,10 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56" id='nos-clients'>
+    <div
+      className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56"
+      id="nos-clients"
+    >
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -128,11 +131,13 @@ function Services() {
     <>
       <SectionIntro
         title="Pourquoi Choisir TOEM ?"
-        className="mt-24 sm:mt-32 lg:mt-40"
-        id="pourquoi-choisir-TEOM"
+        className="mt-56 sm:mt-32 lg:mt-52"
+        id="pourquoi-choisir-TOEM"
       >
         <p>
-          Notre mission est de vous donner les outils, les conseils et le soutien nécessaires pour que votre vente soit simple, rapide et rentable.
+          Notre mission est de vous donner les outils, les conseils et le
+          soutien nécessaires pour que votre vente soit simple, rapide et
+          rentable.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -148,19 +153,33 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Conseils">
-              Notre équipe est là pour vous guider à chaque étape du processus. Nous vous donnons des conseils pratiques pour prendre des photos attrayantes, rédiger une description convaincante et mettre en valeur les atouts de votre propriété.
+              Notre équipe est là pour vous guider à chaque étape du processus.
+              Nous vous donnons des conseils pratiques pour prendre des photos
+              attrayantes, rédiger une description convaincante et mettre en
+              valeur les atouts de votre propriété.
             </ListItem>
             <ListItem title="Service de nettoyage professionnel">
-              Avant les visites, nous vous proposons un service de nettoyage professionnel pour que votre maison ou appartement soit présenté sous son meilleur jour. Une propriété propre et bien entretenue aura un impact positif sur les acheteurs potentiels.
+              Avant les visites, nous vous proposons un service de nettoyage
+              professionnel pour que votre maison ou appartement soit présenté
+              sous son meilleur jour. Une propriété propre et bien entretenue
+              aura un impact positif sur les acheteurs potentiels.
             </ListItem>
             <ListItem title="Economisez sur les commissions">
-              En choisissant de vendre par vous-même, vous évitez les commissions d’agence élevées. Cela signifie que vous pouvez garder une plus grande part du prix de vente pour vous.
+              En choisissant de vendre par vous-même, vous évitez les
+              commissions d’agence élevées. Cela signifie que vous pouvez garder
+              une plus grande part du prix de vente pour vous.
             </ListItem>
             <ListItem title="Mise en valeur de votre bien">
-              Nous vous aidons à présenter votre propriété de manière attrayante et professionnelle. Grâce à nos conseils et astuces, vous attirerez l’attention des acheteurs potentiels dès le premier regard.
+              Nous vous aidons à présenter votre propriété de manière attrayante
+              et professionnelle. Grâce à nos conseils et astuces, vous
+              attirerez l’attention des acheteurs potentiels dès le premier
+              regard.
             </ListItem>
             <ListItem title="Assistance personnalisée">
-              Vous n’êtes pas seul dans cette aventure. Notre équipe est disponible pour répondre à vos questions, vous conseiller sur les meilleures pratiques et vous aider à surmonter les éventuels obstacles.
+              Vous n’êtes pas seul dans cette aventure. Notre équipe est
+              disponible pour répondre à vos questions, vous conseiller sur les
+              meilleures pratiques et vous aider à surmonter les éventuels
+              obstacles.
             </ListItem>
           </List>
         </div>
@@ -170,8 +189,7 @@ function Services() {
 }
 
 export const metadata: Metadata = {
-  description:
-    'L’expert de l’auto-vente immobilière au Luxembourg.',
+  description: 'L’expert de l’auto-vente immobilière au Luxembourg.',
 }
 
 export default async function Home() {
@@ -179,19 +197,21 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-5xl line-clamp-6">
+      <Container className="mt-52 sm:mt-32 md:mt-56">
+        <FadeIn className="line-clamp-6 max-w-5xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-gray-700  sm:text-7xl">
             L’expert de l’auto-vente immobilière au Luxembourg.
           </h1>
           <p className="mt-6 text-xl text-gray-600">
-            Chez Toem, nous croyons que vendre votre maison ou appartement par vous-même ne devrait pas être difficile. C’est pourquoi nous avons créé une plateforme unique pour vous aider à réussir votre vente tout en gardant le contrôle total du processus.
+            Chez Toem, nous croyons que vendre votre maison ou appartement par
+            vous-même ne devrait pas être difficile. C’est pourquoi nous avons
+            créé une plateforme unique pour vous aider à réussir votre vente
+            tout en gardant le contrôle total du processus.
           </p>
-
         </FadeIn>
       </Container>
 
-      <Clients />
+      {/* <Clients /> */}
 
       <Services />
 
@@ -203,7 +223,11 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Home Work', logo: logoHomeWorkDark }}
       >
-        Travailler avec TOEM a été une expérience exceptionnelle. Leur équipe professionnelle et dévouée a rendu le processus d’achat de notre maison de rêve sans stress. Leur expertise, leur attention aux détails et leur approche personnalisée en font une agence immobilière de confiance et recommandable.
+        Travailler avec TOEM a été une expérience exceptionnelle. Leur équipe
+        professionnelle et dévouée a rendu le processus d’achat de notre maison
+        de rêve sans stress. Leur expertise, leur attention aux détails et leur
+        approche personnalisée en font une agence immobilière de confiance et
+        recommandable.
       </Testimonial>
 
       <ContactSection />
